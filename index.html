@@ -8,27 +8,26 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <div class="timer" id="timer-1">
-        <div class="field">
-          <span class="value" data-value="days">00</span>
-          <span class="label">Days</span>
-        </div>
-      
-        <div class="field">
-          <span class="value" data-value="hours">00</span>
-          <span class="label">Hours</span>
-        </div>
-      
-        <div class="field">
-          <span class="value" data-value="mins">00</span>
-          <span class="label">Minutes</span>
-        </div>
-      
-        <div class="field">
-          <span class="value" data-value="secs">00</span>
-          <span class="label">Seconds</span>
-        </div>
-      </div>
+    <form class="form" name="form" autocomplete="on" novalidate>
+      <label>
+        День
+        <input type="number" name="day" value="16" min="1" max="31" />
+      </label>
+    
+      <label>
+        Месяц
+        <input type="number" name="month" value="8" min="1" max="12" />
+      </label>
+
+      <label>
+        Год
+        <input type="number" name="year" value="2021" min="2021" />
+      </label>
+    
+      <button id="start" type="submit">Старт</button>
+      <button id="stop" type="button">Очистить</button>
+    </form>
+    <section class="section_timer"></section>
 </body>
-<script src="./index.js"></script>
+<script src="./js/index.js" type="module"></script>
 </html>
